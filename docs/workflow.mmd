@@ -1,0 +1,12 @@
+flowchart LR
+    A[Realtime User Event] --> B[Orchestrator Agent]
+    B --> C[ProfileParser Agent]
+    B --> D[Copywriter Agent]
+    B --> E[OfferMatcher Agent]
+    C --> F[LTV Decision Engine]
+    D --> F
+    E --> F
+    F --> G[Touchpoint Dispatch]
+    G --> H[User Feedback]
+    H --> I[PromptOptimizer Agent]
+    I --> B

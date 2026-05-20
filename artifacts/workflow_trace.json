@@ -1,0 +1,246 @@
+{
+  "summary": {
+    "processed_users": 5,
+    "simulated_touchpoints": 5,
+    "simulated_conversions": 3,
+    "estimated_manual_cost_reduction": "80% demo assumption",
+    "estimated_high_value_repurchase_lift": "25% demo assumption"
+  },
+  "traces": [
+    {
+      "event": {
+        "user_id": "U10023",
+        "event_type": "browse_no_order",
+        "segment_hint": "beauty_member",
+        "days_since_last_purchase": 8,
+        "ltv": 1820,
+        "points_expiring": 120,
+        "cart_value": 469
+      },
+      "decisions": [
+        {
+          "agent": "ProfileParserAgent",
+          "action": "parse_profile",
+          "result": {
+            "segment": "growth_potential",
+            "churn_risk": 0.36,
+            "repurchase_score": 0.69
+          }
+        },
+        {
+          "agent": "CopywriterAgent",
+          "action": "generate_copy",
+          "result": {
+            "message": "刚刚浏览的商品还在购物车，当前权益组合可在今天锁定。",
+            "tone": "brand-safe"
+          }
+        },
+        {
+          "agent": "OfferMatcherAgent",
+          "action": "match_offer",
+          "result": {
+            "offer": "category coupon + product education content",
+            "timing": "next_best_hour"
+          }
+        },
+        {
+          "agent": "PromptOptimizerAgent",
+          "action": "optimize_prompt_policy",
+          "result": {
+            "reward": -0.25,
+            "policy_update": "reduce discount pressure"
+          }
+        }
+      ],
+      "conversion": false
+    },
+    {
+      "event": {
+        "user_id": "U10087",
+        "event_type": "points_expiring",
+        "segment_hint": "loyal_member",
+        "days_since_last_purchase": 18,
+        "ltv": 5120,
+        "points_expiring": 860,
+        "cart_value": 0
+      },
+      "decisions": [
+        {
+          "agent": "ProfileParserAgent",
+          "action": "parse_profile",
+          "result": {
+            "segment": "high_value_at_risk",
+            "churn_risk": 0.58,
+            "repurchase_score": 0.82
+          }
+        },
+        {
+          "agent": "CopywriterAgent",
+          "action": "generate_copy",
+          "result": {
+            "message": "你常购的系列已补货，今晚为你保留专属权益，积分也可一并抵扣。",
+            "tone": "brand-safe"
+          }
+        },
+        {
+          "agent": "OfferMatcherAgent",
+          "action": "match_offer",
+          "result": {
+            "offer": "points redemption bundle + free shipping",
+            "timing": "same_day_evening"
+          }
+        },
+        {
+          "agent": "PromptOptimizerAgent",
+          "action": "optimize_prompt_policy",
+          "result": {
+            "reward": 1.0,
+            "policy_update": "prioritize concierge tone and loyalty benefits"
+          }
+        }
+      ],
+      "conversion": true
+    },
+    {
+      "event": {
+        "user_id": "U10156",
+        "event_type": "silent_21_days",
+        "segment_hint": "premium_member",
+        "days_since_last_purchase": 31,
+        "ltv": 7360,
+        "points_expiring": 240,
+        "cart_value": 899
+      },
+      "decisions": [
+        {
+          "agent": "ProfileParserAgent",
+          "action": "parse_profile",
+          "result": {
+            "segment": "high_value_at_risk",
+            "churn_risk": 0.87,
+            "repurchase_score": 0.98
+          }
+        },
+        {
+          "agent": "CopywriterAgent",
+          "action": "generate_copy",
+          "result": {
+            "message": "你常购的系列已补货，今晚为你保留专属权益，积分也可一并抵扣。",
+            "tone": "brand-safe"
+          }
+        },
+        {
+          "agent": "OfferMatcherAgent",
+          "action": "match_offer",
+          "result": {
+            "offer": "15% retention coupon + 1v1 service reminder",
+            "timing": "within_15_minutes"
+          }
+        },
+        {
+          "agent": "PromptOptimizerAgent",
+          "action": "optimize_prompt_policy",
+          "result": {
+            "reward": 1.0,
+            "policy_update": "prioritize concierge tone and loyalty benefits"
+          }
+        }
+      ],
+      "conversion": true
+    },
+    {
+      "event": {
+        "user_id": "U10204",
+        "event_type": "cart_abandoned",
+        "segment_hint": "new_growth",
+        "days_since_last_purchase": 5,
+        "ltv": 620,
+        "points_expiring": 0,
+        "cart_value": 329
+      },
+      "decisions": [
+        {
+          "agent": "ProfileParserAgent",
+          "action": "parse_profile",
+          "result": {
+            "segment": "new_growth",
+            "churn_risk": 0.29,
+            "repurchase_score": 0.48
+          }
+        },
+        {
+          "agent": "CopywriterAgent",
+          "action": "generate_copy",
+          "result": {
+            "message": "为你更新了一组更适合当前需求的会员权益。",
+            "tone": "brand-safe"
+          }
+        },
+        {
+          "agent": "OfferMatcherAgent",
+          "action": "match_offer",
+          "result": {
+            "offer": "category coupon + product education content",
+            "timing": "next_best_hour"
+          }
+        },
+        {
+          "agent": "PromptOptimizerAgent",
+          "action": "optimize_prompt_policy",
+          "result": {
+            "reward": 1.0,
+            "policy_update": "increase urgency cue"
+          }
+        }
+      ],
+      "conversion": true
+    },
+    {
+      "event": {
+        "user_id": "U10281",
+        "event_type": "repeat_window",
+        "segment_hint": "mother_baby",
+        "days_since_last_purchase": 24,
+        "ltv": 2980,
+        "points_expiring": 320,
+        "cart_value": 588
+      },
+      "decisions": [
+        {
+          "agent": "ProfileParserAgent",
+          "action": "parse_profile",
+          "result": {
+            "segment": "growth_potential",
+            "churn_risk": 0.71,
+            "repurchase_score": 0.88
+          }
+        },
+        {
+          "agent": "CopywriterAgent",
+          "action": "generate_copy",
+          "result": {
+            "message": "你有 320 积分即将过期，可兑换专属复购礼。",
+            "tone": "brand-safe"
+          }
+        },
+        {
+          "agent": "OfferMatcherAgent",
+          "action": "match_offer",
+          "result": {
+            "offer": "15% retention coupon + 1v1 service reminder",
+            "timing": "within_15_minutes"
+          }
+        },
+        {
+          "agent": "PromptOptimizerAgent",
+          "action": "optimize_prompt_policy",
+          "result": {
+            "reward": -0.25,
+            "policy_update": "reduce discount pressure"
+          }
+        }
+      ],
+      "conversion": false
+    }
+  ]
+}

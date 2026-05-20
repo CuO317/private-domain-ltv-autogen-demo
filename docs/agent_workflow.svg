@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="620" viewBox="0 0 1180 620">
+  <rect width="1180" height="620" fill="#f7f8fb"/>
+  <text x="46" y="58" font-family="Segoe UI, Arial" font-size="28" font-weight="700" fill="#172033">AutoGen-style Multi-Agent LTV Workflow</text>
+  <text x="46" y="90" font-family="Segoe UI, Arial" font-size="15" fill="#5a6475">Simulation artifact: insight -> touchpoint -> conversion -> review</text>
+  <g font-family="Segoe UI, Arial" font-size="15" fill="#172033">
+    <rect x="48" y="145" width="190" height="84" rx="8" fill="#ffffff" stroke="#c9d1df"/>
+    <text x="78" y="178" font-weight="700">Realtime Event</text>
+    <text x="78" y="204" fill="#5a6475">browse, points, churn</text>
+    <rect x="306" y="128" width="214" height="118" rx="8" fill="#e9f2ff" stroke="#7aa7e8"/>
+    <text x="344" y="172" font-weight="700">Orchestrator Agent</text>
+    <text x="338" y="199" fill="#35557d">global routing / policy</text>
+    <rect x="594" y="104" width="220" height="72" rx="8" fill="#ffffff" stroke="#c9d1df"/>
+    <text x="630" y="148" font-weight="700">ProfileParser Agent</text>
+    <rect x="594" y="212" width="220" height="72" rx="8" fill="#ffffff" stroke="#c9d1df"/>
+    <text x="640" y="256" font-weight="700">Copywriter Agent</text>
+    <rect x="594" y="320" width="220" height="72" rx="8" fill="#ffffff" stroke="#c9d1df"/>
+    <text x="628" y="364" font-weight="700">OfferMatcher Agent</text>
+    <rect x="884" y="202" width="210" height="112" rx="8" fill="#eef8f0" stroke="#8ac69a"/>
+    <text x="936" y="246" font-weight="700">LTV Engine</text>
+    <text x="918" y="273" fill="#466b4d">risk + repurchase score</text>
+    <rect x="884" y="390" width="210" height="86" rx="8" fill="#fff7e8" stroke="#e6b45e"/>
+    <text x="915" y="426" font-weight="700">PromptOptimizer</text>
+    <text x="924" y="452" fill="#806029">feedback reward loop</text>
+  </g>
+  <g stroke="#637083" stroke-width="2" fill="none" marker-end="url(#arrow)">
+    <path d="M238 187 L306 187"/>
+    <path d="M520 176 C560 138 560 140 594 140"/>
+    <path d="M520 198 C560 236 560 248 594 248"/>
+    <path d="M520 218 C560 326 560 356 594 356"/>
+    <path d="M814 140 C852 160 860 204 884 234"/>
+    <path d="M814 248 L884 258"/>
+    <path d="M814 356 C850 338 862 300 884 278"/>
+    <path d="M989 314 L989 390"/>
+    <path d="M884 434 C760 526 388 526 413 246"/>
+  </g>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#637083"/>
+    </marker>
+  </defs>
+</svg>
